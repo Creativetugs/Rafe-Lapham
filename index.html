@@ -8,12 +8,19 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
     <style>
         body { font-family: 'Inter', sans-serif; }
+        /* small visual touches */
+        .hero-visual { border-radius: 12px; overflow: hidden; }
+        .logo-img { height: 44px; width: auto; }
     </style>
 </head>
 <body class="bg-white text-stone-900 selection:bg-stone-200">
 
     <nav class="flex items-center justify-between px-8 py-6 sticky top-0 bg-white/90 backdrop-blur-sm z-50">
-        <div class="text-2xl font-bold tracking-tighter">RL</div>
+        <div class="flex items-center gap-4">
+            <!-- logo from repo -->
+            <img src="reafe-logo.jpeg" alt="Rafe logo" class="logo-img" />
+            <div class="text-sm text-stone-500">Rafe Lapham</div>
+        </div>
         <div class="space-x-8 text-sm uppercase tracking-widest font-medium hidden md:block">
             <a href="#work" class="hover:text-stone-500 transition">Work</a>
             <a href="#about" class="hover:text-stone-500 transition">About</a>
@@ -24,50 +31,60 @@
 
     <header class="grid md:grid-cols-2 gap-12 px-8 py-16 items-center">
         <div class="space-y-8">
-            <h1 class="text-6xl md:text-8xl font-medium tracking-tight">Ideas Worth Building. Stories Worth Telling.</h1>
+            <h1 class="text-5xl md:text-7xl font-medium tracking-tight">Ideas Worth Building. Stories Worth Telling.</h1>
             <p class="text-xl text-stone-600">Design. Strategy. Objects. Brands.</p>
             <p class="max-w-md text-stone-700 leading-relaxed">Four decades of creating meaningful work that connects people, products, and stories.</p>
             <div class="flex gap-4">
                 <button class="bg-black text-white px-8 py-3 rounded-full hover:bg-stone-800 transition">View Work</button>
                 <button class="border border-black px-8 py-3 rounded-full hover:bg-stone-100 transition">Contact</button>
             </div>
+            <div class="mt-6 text-sm text-stone-500">Featured: Creative Direction & Product Design — photography by collaborators</div>
         </div>
-        <div class="h-[600px] bg-stone-200 overflow-hidden rounded-sm shadow-inner">
-            <img src="https://placehold.co/800x1200/e5e5e5/999999?text=Headshot" alt="Rafe Lapham" class="w-full h-full object-cover">
+        <div class="h-[600px] bg-stone-200 overflow-hidden rounded-md shadow-inner hero-visual relative">
+            <!-- use the headshop image from the repo -->
+            <img src="rafe-headshop.jpeg" alt="Rafe Lapham headshot" class="w-full h-full object-cover" />
+            <div class="absolute left-6 bottom-6 bg-black/70 text-white px-4 py-2 rounded-md text-sm">Creative Direction</div>
         </div>
     </header>
 
     <section id="work" class="px-8 py-24 bg-stone-50">
-        <h2 class="text-sm uppercase tracking-widest mb-16 text-stone-500">Selected Work</h2>
+        <h2 class="text-sm uppercase tracking-widest mb-12 text-stone-500">Selected Work</h2>
         <div class="grid md:grid-cols-3 gap-12">
             <div class="space-y-4 group cursor-pointer">
-                <div class="h-64 bg-stone-200 overflow-hidden rounded-sm mb-6">
-                    <img src="https://placehold.co/800x600/d6d3d1/57534e?text=Creative+Direction" alt="Creative Direction" class="w-full h-full object-cover">
+                <div class="h-64 bg-stone-200 overflow-hidden rounded-lg mb-6 hero-visual">
+                    <img src="https://www.stirworld.com/images/article_gallery/the-best-of-product-designs-of-2021-best-product-designs-of-2021-stirworld-211217063333.jpg" alt="Creative Direction" class="w-full h-full object-cover">
                 </div>
                 <h3 class="text-2xl font-medium">Creative Direction</h3>
                 <p class="text-stone-600">Building brands with clarity, purpose and lasting impact.</p>
             </div>
             <div class="space-y-4 group cursor-pointer">
-                <div class="h-64 bg-stone-200 overflow-hidden rounded-sm mb-6">
-                    <img src="https://placehold.co/800x600/d6d3d1/57534e?text=Product+Design" alt="Product Design" class="w-full h-full object-cover">
+                <div class="h-64 bg-stone-200 overflow-hidden rounded-lg mb-6 hero-visual">
+                    <img src="https://cdn.prod.website-files.com/63062129119620a44791a2eb/682f440b4115ab5d95bc46dc_storytelling_in_marketing_hero_image_1440x810_2x-p-2000.webp" alt="Product Design" class="w-full h-full object-cover">
                 </div>
                 <h3 class="text-2xl font-medium">Product Design</h3>
                 <p class="text-stone-600">Thoughtful products shaped by function, craftsmanship and experience.</p>
             </div>
             <div class="space-y-4 group cursor-pointer">
-                <div class="h-64 bg-stone-200 overflow-hidden rounded-sm mb-6">
+                <div class="h-64 bg-stone-200 overflow-hidden rounded-lg mb-6 hero-visual">
                     <img src="https://placehold.co/800x600/d6d3d1/57534e?text=Marketing" alt="Marketing" class="w-full h-full object-cover">
                 </div>
                 <h3 class="text-2xl font-medium">Marketing Communications</h3>
                 <p class="text-stone-600">Turning ideas into stories people remember.</p>
             </div>
         </div>
+
+        <!-- small creative visual gallery -->
+        <div class="mt-12 grid md:grid-cols-3 gap-6">
+            <img src="https://placehold.co/600x400/ffffff/000000?text=Design+Spec" class="w-full rounded-lg shadow-sm object-cover" alt="spec">
+            <img src="https://placehold.co/600x400/ffffff/000000?text=Sketches" class="w-full rounded-lg shadow-sm object-cover" alt="sketches">
+            <img src="rafe-headshop.jpeg" class="w-full rounded-lg shadow-sm object-cover" alt="headshot small">
+        </div>
     </section>
 
     <section class="px-8 py-24 max-w-4xl">
         <h2 class="text-xs uppercase tracking-widest text-stone-500 mb-6">Philosophy</h2>
         <h3 class="text-4xl md:text-5xl font-medium mb-8 italic">"Less noise. More meaning."</h3>
-        <p class="text-lg text-stone-700 leading-relaxed">Every project begins with a simple question: What story deserves to be told? From branding and product design to writing and visual communication, the focus has always remained the same—creating work that feels authentic, timeless and human.</p>
+        <p class="text-lg text-stone-700 leading-relaxed">Every project begins with a simple question: What story deserves to be told? From branding and product design to writing and visual commun[...]
     </section>
 
     <section class="px-8 py-16 border-t border-stone-200">
@@ -113,7 +130,10 @@
 
     <footer class="px-8 py-16 bg-white border-t border-stone-200">
         <div class="flex flex-col md:flex-row justify-between items-center gap-8">
-            <div class="text-xl font-bold">RL</div>
+            <div class="flex items-center gap-3">
+                <img src="reafe-logo.jpeg" alt="footer logo" class="logo-img" />
+                <div class="text-sm font-medium">Rafe Lapham</div>
+            </div>
             <div class="text-center text-sm text-stone-500">
                 <p>Three Birds on a Limb, LLC</p>
                 <p>Ketchum, Idaho</p>
